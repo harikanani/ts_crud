@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "e32c12ce-3a71-49cd-b338-4180af79b877",
+		"name": "TypeScript CRUD",
+		"description": "Crud Operation Using TypeScript",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add New Contact",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "firstName",
+							"value": "Jay",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "Kothawala",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "jkv@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "9898987878",
+							"type": "text"
+						},
+						{
+							"key": "company",
+							"value": "JKV",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "javascript"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/contact",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"contact"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Contact",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"id\": 10,\r\n            \"productName\": \"Netgear Cable Modem\",\r\n            \"productCode\": \"CM700\",\r\n            \"proddescription\": \"Netgear Cable Modem compatible with all cables\",\r\n            \"prodRating\": 4.0\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/contact",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"contact"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Contact By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/contact/5fbf724b26d2b63e6895a932",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"contact",
+						"5fbf724b26d2b63e6895a932"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Contact ",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "firstName",
+							"value": "Abhi",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "abhigoyani@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "6271871567",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/contact/5fbf724b26d2b63e6895a932?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"contact",
+						"5fbf724b26d2b63e6895a932"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				},
+				"description": "Provide ID in Params"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Contact",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/contact/5fbf75660c7eda38240dc03a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"contact",
+						"5fbf75660c7eda38240dc03a"
+					]
+				},
+				"description": "Provide Id in Params"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
